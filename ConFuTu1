@@ -1,0 +1,166 @@
+//header
+#include <conio.h>
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <stdio.h>
+
+
+//standard form
+using namespace std;
+
+//lcm funtion for a and b
+int lcm(int a, int b, int c){ //a and b and c comes from main program
+	long x; //for a
+	long y; //for b
+	long z; //for c
+	long max; //for max value
+	long count; //if lcm fails then recovers
+	long flag; //loop end
+	long lcmo; //least common multiple output
+	
+	x = a;
+	y = b;
+	z = c;
+	
+	//finding the maximum
+	if(x>=y && x>=z){
+		max = x;
+	}
+	else if(y>=x&&y>=z){
+		max = y;
+	}
+	else if(z>=x&&z>=y){
+		max = z;
+	}
+	
+	//max values decided
+	for(count=1;flag==0;count++){
+		
+		lcmo = max * count;
+		
+		if(lcmo%x==0 && lcmo%y==0 && lcmo%z==0){
+			
+			flag=1;
+		}
+		
+		
+	}
+	return lcmo;	
+	  
+}
+
+//HCF function
+int hcf(int a, int b, int c){
+	
+	//3 new variables of this function
+	int p;
+	int q;
+	int r;
+	
+	//declaring variables value
+	p =a;
+	q =b;
+	r =c;
+	
+	//comapring 3 values to find the largest values
+	//variable for storing the max value
+	int max;
+	
+	int max2;
+	
+	int max3;
+	
+	if(p>=q && p>=r){
+		max = p;
+		
+		if(q>=r){
+			
+			max2 = q;
+			max3 = r;
+		}
+		
+		else{
+			max2 = r;
+			max3 = q;
+		}
+		
+		
+	}
+	
+	if(q>=p && q>=r){
+		max = q;
+	}
+	
+	if(r>=p && r>=q){
+		max = r;
+		
+		if(p>=q){
+			
+			max2 = p;
+			max3 = q;
+		}
+		
+		else{
+			max2 = q;
+			max3 = p;
+		}
+	}
+	
+	//max value if found
+	
+	//now we have to find all the highest common divisor from 1 to max
+	//minimum variable set
+	
+	int min; //starting
+	
+	//hcf storing point
+	int hcf=1;
+	
+	for(min=1;min<=max;++min){
+		
+		if(max%min==0 && max2%min==0 && max3%min==0){
+			
+			hcf = min;
+		} 
+		
+	}
+	
+	return hcf;
+	
+}
+
+//main body
+int main(){
+	
+  //3 variables
+  int a;
+  int b;
+  int c;
+  
+  cout << "Enter a: "; cin >> a;if(a=='a' || a=='A'){exit;} 
+  cout << endl;  
+  cout << "Enter b: "; cin >> b;if(b=='a' || b=='A'){exit;} 
+  cout << endl;
+  cout << "Enter c: "; cin >> c;if(c=='a' || c=='A'){exit;} 
+  cout << endl;
+  
+  //LCM finding of 3 values
+  cout << "LCM of " << a << "," << b << "," << c << "=" << lcm(a,b,c) << endl; //a,b,c go to lcm function
+  
+  //HCF finding of 3 values
+  cout << "HCF of " << a << "," << b << "," << c << "=" << hcf(a,b,c) << endl; //return of lcm function is used to find the hcf
+  
+  //wait until character is pressed on screen
+  getch();
+  
+  //returning 
+  return 0;
+	
+}
+
+//Algorithm
+// \
+1. take 3 inputs\
+2.calculate the lcm of 3 values\
+3. calculate hcf
