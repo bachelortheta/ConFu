@@ -12,85 +12,71 @@
 using namespace std;
 
 
-
-//TEST PHASE
-
-/*
-//Structure for person info
-struct person{
-	//Name
-	string name;
+//Akita DDoS Class
+class akita{
 	
-	//Age
-	int age;
-	
-	//ContactNo.
-	int phone;
-	
-};
-
-//ClassSampleForStudents
-
-
-//Class concept is simple that class has objects\
-object has functions and structures.
-
-class sample1{
-	//access point
+	//security level
+	//public for all functions so they can be called anywhere in the program
 	public:
+	
+	//functions as algorithms
+//	void userid();  string; --
+//	void pass();    char, string --
+//  constructor();  online --
+//  ~destructor();	offline	
 		
-	//structure
-	//Name
-	string name;
-	
-	//Age
-	int age;
-	
-	//ContactNo.
-	int phone;
-	
-	//constructorDest
-	sample1(){
-	};
-	
-	~sample1(){
-	};
-	
-	//functions
-	
-	void userdata(){
+	akita(){
 		
-		cout << "Name: "; cin >> name; cout << endl;
-		cout << "Age: "; cin >> age; cout << endl;
-		cout << "Phone No.: "; cin >> phone; cout << endl;
+		cout << "System is activated" << endl;
 	}
-
 	
+//	void userid(string name){ //name comes from main driver
+//		
+//		string name1;
+//		
+//		name1 = name;
+//		
+//		return name1; 
+//	}
+	
+	void pass(){
+		
+		char ch;
+		
+		string pass;
+		
+		ch = getch();
+		
+		while(ch!=13){ //13 is Enter in ASCII
+			
+			pass.push_back(ch);
+			
+			cout << "*";
+			
+			ch = getch();
+			
+		}
+		
+	}
+	
+	~akita(){
+		
+		cout << "System is deactivated" << endl;
+	} 
 };
 
-//structure for student marks and average
-struct structname{
-	
-	
-};
 
-//main body
 int main(){
 	
-	sample1 obj1;
-	obj1.userdata();
+	string name;
 	
-	sample1 obj2;
-	obj2.userdata();
-	getch();
+	akita obj1;
+	
+	cout << "Enter Name: "; cin >> name; cout << endl;
+	
+	cout << "Enter Pass: "; obj1.pass(); cout << endl;
 	
 	return 0;
-	
-	
-} */
 
-//AKITA BEGINS here
-
-
-
+}
 
