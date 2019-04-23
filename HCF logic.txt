@@ -1,0 +1,5 @@
+* find the highest values and arrange in order from high to low
+* start from 1 to max value and divide every value in order list
+* the value in loop jo sabka remainder zero de tou wo factor 
+* jahan aik bhe value ka remainder 0 nhi aaya, wo point hcf declare kr deta hai
+

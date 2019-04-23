@@ -1,0 +1,17 @@
+It is function
+It is auto called
+It has same name as class
+It is used to solve intialization issues       (1)
+It is called after first object is created
+
+
+constructor object ko object bnata hai
+
+
+(1) ANSWER.
+jab class ka object bnaya wo kisi real object ko represent nhi kr raha is liye object initialize krwanay k liye we have
+have to do something. we make constructor to do object initialization, isi liye contructor object ko object bnata hai
+
+Q(2) What is constructor overloading?
+ANSWER. jab 2 object bnao aur aik object 2 values pass kr raha hai class ko aur dosra object 1 value pass kr raha hai 
+tou us case me ham 2 constructor bnayeingy. Is ko kahengy constructor overloading. quite simple

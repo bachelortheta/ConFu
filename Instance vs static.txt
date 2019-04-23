@@ -1,0 +1,7 @@
+Instance member:
+Every class has its own instance member
+Like if we have a1 as instance then every class has different a1
+
+Static Member:
+It is only one
+All classes can use it, means if static is a1 then a1 is specific for all classes not different a1.

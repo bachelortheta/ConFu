@@ -1,0 +1,11 @@
+zThe basic syntax of using the ternary operator is thus:
+(condition) ? (if_true) : (if_false)
+Which is basically the same as:
+1
+2
+3
+4
+if (condition)
+    if_true;
+else
+    if_false;
