@@ -24,10 +24,16 @@ class akita{
 //	void pass();    char, string --
 //  constructor();  online --
 //  ~destructor();	offline	
+//  fibonancci working()  
 		
 	akita(){
 		
 		cout << "System is activated" << endl;
+	}
+	
+	akita(int n){
+		
+		cout << "System is activated for module 2" << endl;
 	}
 	
 //	void userid(string name){ //name comes from main driver
@@ -59,6 +65,25 @@ class akita{
 		
 	}
 	
+	
+	int fib(int n){    //n value will be passed by the user 
+	//fibnonci is sum of 2 values in series 
+	// it makes spiral like shape 
+	
+//	int nf;    // nf means next fibonanci series values
+	int r;
+	
+	r = n; //coming n from main driver is assigned to r
+	
+	if(r==0 || r==1) return r;
+	
+	else
+	
+	{
+		return fib(r-1)+fib(r-2);
+	}
+}
+	
 	~akita(){
 		
 		cout << "System is deactivated" << endl;
@@ -76,7 +101,15 @@ int main(){
 	
 	cout << "Enter Pass: "; obj1.pass(); cout << endl;
 	
+	//driver for fibonanci
+	int n;
+	
+	cout << "Enter n to find out fibonani"; cin >> n; cout << endl;
+	
+	akita obj2(n);
+	
+	cout << "Next fibonanici for the value n is: " << obj2.fib(n) << endl;
+	
 	return 0;
 
 }
-
